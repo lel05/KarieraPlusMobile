@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KarieraPlusMobile.Views.About_Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="O aplikacji" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="24" FontAttributes="Bold"/>
+            <Label Text='Aplikacja mobilna "KarieraPlus" to narzędzie stworzone z myślą o użytkownikach poszukujących nowych możliwości zawodowych oraz pracodawcach szukających odpowiednich kandydatów.'
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

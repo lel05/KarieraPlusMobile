@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KarieraPlusMobile.Views.AddOffer_Page">
+
+
+    <ScrollView HorizontalScrollBarVisibility="Default" VerticalScrollBarVisibility="Always">
+        <StackLayout Margin="20">
+            <Label Text="Dodaj Ofertę Pracy" FontSize="Title" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20"/>
+
+            <Entry Placeholder="Company Name" x:Name="CompanyNameEntry" Margin="0,0,0,10"/>
+            <Entry Placeholder="Type of Contract" x:Name="ContractTypeEntry" Margin="0,0,0,10"/>
+            <Entry Placeholder="Type of Job" x:Name="JobTypeEntry" Margin="0,0,0,10"/>
+            <Entry Placeholder="Salary" x:Name="SalaryEntry" Margin="0,0,0,10"/>
+            <Entry Placeholder="Category" x:Name="CategoryEntry" Margin="0,0,0,10"/>
+            <Editor Placeholder="Duties" x:Name="DutiesEditor" Margin="0,0,0,10" AutoSize="TextChanges"/>
+            <Editor Placeholder="Requirements" x:Name="RequirementsEditor" Margin="0,0,0,10" AutoSize="TextChanges"/>
+
+            <Button Text="Dodaj Ofertę" Clicked="AddOffer_Clicked" BackgroundColor="#2196F5" TextColor="White"/>
+
+            <Label Text="Usuń lub edytuj ofertę" FontSize="Title" HorizontalOptions="CenterAndExpand" Margin="20,0,0,20"/>
+
+            <ListView x:Name="offersListView" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Usuń" Clicked="DeleteOffer_Clicked" CommandParameter="{Binding .}" />
+                                <MenuItem Text="Edytuj" Clicked="EditOffer_Clicked" CommandParameter="{Binding .}" />
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout>
+                                    <Label Text="{Binding Type_of_job}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="24"/>
+                                    <Label Grid.Column="2" Text="{Binding Type_of_contract}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="17"/>
+                                    <Label Grid.Column="4" Text="{Binding Salary}" VerticalOptions="Center" HorizontalOptions="Start" FontSize="17"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>

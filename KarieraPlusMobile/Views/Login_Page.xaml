@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KarieraPlusMobile.Views.Login_Page"
+             Title="Logowanie">
+    
+    <StackLayout>
+        <Entry Placeholder="Email" x:Name="EmailEntry" />
+        <Entry Placeholder="Hasło" IsPassword="True" x:Name="PasswordEntry" />
+        <Button Text="Zaloguj się" Clicked="LoginButton_Clicked" BackgroundColor="#2196F5" TextColor="White"/>
+        <Label Text="" x:Name="ErrorLabel" TextColor="Red" />
+        
+        <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+            <Button Text="Nie posiadasz jeszcze konta? Zarejestruj się!" Clicked="RegisterBtn_Clicked" BackgroundColor="#2196F5" TextColor="White" TextTransform="Default"/>
+        </StackLayout>
+    </StackLayout>
+
+
+    
+</ContentPage>

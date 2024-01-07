@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KarieraPlusMobile.Views.UserProfile_Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="UserIdLabel" IsVisible="false"/>
+            <Entry Placeholder="Imię" x:Name="FirstNameEntry" />
+            <Entry Placeholder="Nazwisko" x:Name="SurnameEntry" />
+            <Entry Placeholder="E-mail" x:Name="EmailEntry" Keyboard="Email" />
+            <Entry Placeholder="Numer telefonu" x:Name="PhoneNumberEntry" />
+            <Entry Placeholder="Adres zamieszkania" x:Name="AddressEntry" />
+            <Entry Placeholder="Hasło" x:Name="PasswordEntry" IsPassword="True" />
+            <Button Text="Zapisz dane" Clicked="SaveButton_Clicked" BackgroundColor="#2196F5" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
